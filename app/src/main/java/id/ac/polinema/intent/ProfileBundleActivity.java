@@ -29,7 +29,9 @@ public class ProfileBundleActivity extends AppCompatActivity {
         Bundle extras = getIntent().getExtras();
         if (extras != null) {
             // TODO: display value here
-
+            usernameText.setText(extras.getString(USERNAME_KEY));
+            nameText.setText(extras.getString(NAME_KEY));
+            ageText.setText(String.valueOf(getIntent().getIntExtra(AGE_KEY, 0)));
         }
     }
 }
